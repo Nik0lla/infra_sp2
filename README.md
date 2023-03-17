@@ -19,10 +19,13 @@
 git clone git@github.com:Nik0lla/api_yamdb.git
 ```
 
-2. Перейдите в папку с кодом и создайте виртуальное окружение и активирйте его:
+2. Перейдите в папку с кодом и создайте виртуальное окружение и активирйте его.
 ```bash
 cd infra_sp2
 cd api_yamdb
+```
+для windows-систем:
+```bash
 python -m venv venv
 ```
 для *nix-систем:
@@ -30,7 +33,7 @@ python -m venv venv
 python3 -m venv venv
 ```
 
-3. Активируйте виртуальное окружение:
+3. Активируйте виртуальное окружение.
 для windows-систем:
 ```bash
 source venv/Scripts/activate
@@ -42,9 +45,14 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 ```
 
-4. Установите зависимости:
+4. Установите зависимости.
+для windows-систем:
 ```bash
 python -m pip install -r requirements.txt
+```
+для *nix-систем:
+```bash
+python3 -m pip install -r requirements.txt
 ```
 
 5. Переходим в папку с файлом docker-compose.yaml:
