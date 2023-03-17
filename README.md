@@ -61,6 +61,7 @@ python3 -m pip install -r requirements.txt
 5. Переходим в папку с файлом docker-compose.yaml:
 ```bash
 cd ..
+cd infra
 ```
 
 6. Поднимаем контейнеры (infra_db_1, infra_web_1, infra_nginx_1):
