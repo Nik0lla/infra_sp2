@@ -39,37 +39,24 @@ python3 -m venv venv
 Для windows-систем:
 ```bash
 source venv/Scripts/activate
-python -m pip install --upgrade pip
 ```
 для *nix-систем:
 ```bash
 source venv/bin/activate
-python3 -m pip install --upgrade pip
 ```
 
-4. Установите необходимые пакеты.
-
-Для windows-систем:
-```bash
-python -m pip install -r requirements.txt
-```
-для *nix-систем:
-```bash
-python3 -m pip install -r requirements.txt
-```
-
-5. Переходим в папку с файлом docker-compose.yaml:
+4. Переходим в папку с файлом docker-compose.yaml:
 ```bash
 cd ..
 cd infra
 ```
 
-6. Поднимаем контейнеры (infra_db_1, infra_web_1, infra_nginx_1):
+5. Поднимаем контейнеры (infra_db_1, infra_web_1, infra_nginx_1):
 ```bash
 docker-compose up -d --build
 ```
 
-7. Выполняем миграции:
+6. Выполняем миграции:
 ```bash
 docker-compose exec web python manage.py makemigrations reviews
 ```
@@ -77,27 +64,27 @@ docker-compose exec web python manage.py makemigrations reviews
 docker-compose exec web python manage.py migrate
 ```
 
-8. Создаем суперпользователя:
+7. Создаем суперпользователя:
 ```bash
 docker-compose exec web python manage.py createsuperuser
 ```
 
-9. Србираем статику:
+8. Србираем статику:
 ```bash
 docker-compose exec web python manage.py collectstatic --no-input
 ```
 
-10. Создаем дамп базы данных (нет в текущем репозитории):
+9. Создаем дамп базы данных (нет в текущем репозитории):
 ```bash
 docker-compose exec web python manage.py dumpdata > dumpPostrgeSQL.json
 ```
 
-11. Останавливаем контейнеры:
+10. Останавливаем контейнеры:
 ```bash
 docker-compose down -v
 ```
 
-### Шаблон наполнения .env (не включен в текущий репозиторий) расположенный по пути infra/.env
+### Шаблон наполнения .env.sample расположенный по пути infra/.env.sample
 ```
 DB_ENGINE=django.db.backends.postgresql
 DB_NAME=postgres
