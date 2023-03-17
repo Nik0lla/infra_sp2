@@ -1,4 +1,5 @@
 # Yamdb API
+Проект REST API для сервиса YaMDb предназначен для сбора отзывов о книгах, фильмах и музыке.
 
 ## Описание
 
@@ -42,7 +43,7 @@ python -m pip install --upgrade pip
 для *nix-систем:
 ```bash
 source venv/bin/activate
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 ```
 
 4. Установите зависимости.
