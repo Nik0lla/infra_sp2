@@ -17,7 +17,7 @@
 
 1. Склонируйте репозиторий:
 ```bash
-git clone git@github.com:Nik0lla/api_yamdb.git
+git clone git@github.com:Nik0lla/infra_sp2.git
 ```
 
 2. Перейдите в папку с кодом и создайте виртуальное окружение и активирйте его.
@@ -60,7 +60,7 @@ python3 -m pip install -r requirements.txt
 
 5. Переходим в папку с файлом docker-compose.yaml:
 ```bash
-cd infra
+cd ..
 ```
 
 6. Поднимаем контейнеры (infra_db_1, infra_web_1, infra_nginx_1):
