@@ -35,6 +35,7 @@ python3 -m venv venv
 ```
 
 3. Активируйте виртуальное окружение.
+
 для windows-систем:
 ```bash
 source venv/Scripts/activate
@@ -46,7 +47,8 @@ source venv/bin/activate
 python3 -m pip install --upgrade pip
 ```
 
-4. Установите зависимости.
+4. Установите необходимые пакеты.
+
 для windows-систем:
 ```bash
 python -m pip install -r requirements.txt
